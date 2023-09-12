@@ -1,0 +1,64 @@
+// index.scss
+body {
+  color: #333;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul { list-style-type: none; }
+
+h1, h2, h3, h4{margin-bottom: 20px;}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #efefef;
+  padding: 20px;
+}
+
+nav {
+  background: #000;
+  color: #fff;
+  .container { background: transparent; }
+  ul li {
+    display: inline-block;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+
+.Home{
+  .item-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    li{
+      width: calc(100% / 3 - 1rem);
+      img{
+        width: 100%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+      }
+      h3{
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      p{margin-bottom: 5px;}
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.Detail{
+  img{width: 70%;}
+}
