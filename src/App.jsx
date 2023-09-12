@@ -6,12 +6,10 @@ import Detail from './pages/Detail';
 import Nav from './components/Nav';
 import MatchAllRoute from './pages/MatchAllRoute';
 
-
 function App() {
-  const API_KEY = import.meta.env.VITE_API_KEY
+  const API_KEY = import.meta.env.VITE_API_KEY;
   const API_URL = `https://apis.data.go.kr/6260000/BusanPetAnimalInfoService/getPetAnimalInfo?serviceKey=${API_KEY}&pageNo=1&numOfRows=10&resultType=json`;
   const [data, setData] = useState({})
-  
   useEffect(() => {
     fetch(API_URL)
       .then(res => res.json())
@@ -30,7 +28,7 @@ function App() {
           <Route path='/' element={<Home data={data} />} />
         }
         <Route path='/about' element={<About />} />
-        { Object.keys(data).length > 0 &&        
+        { Object.keys(data).length > 0 &&
           <Route path='/detail/:id' element={<Detail data={data} />} />
         }
         <Route path="*" element={<MatchAllRoute />} />

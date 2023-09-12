@@ -2,11 +2,9 @@ import { useParams } from "react-router-dom"
 
 export default function Detail(props) {
   const { data } = props;
-  const _data = data.getPetAnimalInfo.body.items.item; 
-
+  const _data = data.getPetAnimalInfo.body.items.item;
   const params = useParams(); // url 파라미터 저장
   console.log(params)
- 
 
   return (
     <main className="container Detail">

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 export default function Home(props) {
   const { data } = props;
@@ -16,12 +16,12 @@ export default function Home(props) {
           _data.map((item, key) => {
             return (
               <li key={key}>
-                <a href={`detail/${key}`}>
-                  <img src={item.ty3Picture} alt="" />
+                <Link to={`detail/${key}`}>
+                  <img loading="lazy" src={item.ty3Picture} alt={item.ty3Kind} />
                   <h3>{item.sj}</h3>
                   <p>상태: {item.ty3Process}</p>
                   <p>견종: {item.ty3Kind}</p>
-                </a>
+                </Link>
               </li>
             )
           })
